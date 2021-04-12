@@ -9,7 +9,7 @@ class Solution {
     @res.push($path.Array) if $path; 
     # .gist 是字符串化
     
-    for ($start .. @nums.elems-1) -> $i {
+    for ($start .. ^@nums.elems) -> $i {
       $path.push(@nums[$i]);
       $path.say;
       self.track-back($i+1, @nums);
